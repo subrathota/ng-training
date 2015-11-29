@@ -1,0 +1,14 @@
+<div>
+	<table class="table" border="0" cellspacing="5" cellpadding="5">
+		<tr>
+			<th>Sl #</th>
+			<th>Title</th>
+			<th>Poster</th>
+		</tr>
+		<tr ng-repeat="movie in moviesList">
+			<td>{{movie.sl}}</td>
+			<td>{{movie.title | uppercase}}</td>
+			<td><img ng-src="{{movie.poster}}" width="40" align="absmiddle" /></td>
+		</tr>
+	</table>
+</div>

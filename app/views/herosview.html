@@ -1,0 +1,24 @@
+ <div>
+		<div class="well">
+	  	<label> Filter Data : </label>
+	  	<input type="text"  ng-model='fil' />
+	  </div>
+	  <table class="table" border="0" cellspacing="5" cellpadding="5">
+		  <tr>
+		  	<th ng-click="sortMe('id')">Title</th>
+		  	<th ng-click="sortMe('title')">Title</th>
+		  	<th ng-click="sortMe('photo')">Photo</th>
+		  	<th ng-click="sortMe('power')">Power</th>
+		  	<th ng-click="sortMe('movies')">Movies</th>
+		  	<th ng-click="sortMe('city')">City</th>
+		  </tr>
+		  <tr ng-repeat="hero in heros | orderBy : prop : rev | filter : {'title':fil}">
+		  	<td>{{hero.id}}</td>
+		  	<td>{{hero.title | uppercase}}</td>
+		  	<td><img ng-src="{{hero.photo}}" width="40" align="absmiddle" /></td>
+		  	<td>{{hero.power}}</td>
+		  	<td><a class="btn btn-default" href="#/movies/{{hero.id}}">{{hero.movies}} so far</a></td>
+		  	<td>{{hero.city}}</td>
+		  </tr>
+	  </table>
+	  </div>

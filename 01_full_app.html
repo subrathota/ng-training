@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	  <meta charset="utf-8"/>
+	  <title>Document</title>
+	  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
+	  <script src="lib/angular.js"></script>
+	  <script src="lib/angular-route.js"></script>
+	  <script src="app/modules/main.js"></script>
+	  <script src="app/config/routing.js"></script>
+	  <script src="app/controllers/homeController.js"></script>
+	  <script src="app/controllers/herosController.js"></script>
+	  <script src="app/controllers/batController.js"></script>
+	  <script src="app/controllers/ironController.js"></script>
+	  <script src="app/controllers/spiderController.js"></script>
+	  <script src="app/controllers/moviesController.js"></script>
+	</head>
+	<body ng-app="synechronModule"  >
+		<div class="container">
+			<header>
+			<nav class="navbar navbar-inverse">
+				<ul class="nav navbar-nav">
+					<li> <a href="#/">Synechron | Bangalore</a> </li>
+				</ul>
+				
+				<ul class="nav navbar-nav navbar-right">
+					<li> <a href="#/heros">All </a> </li>
+					<li> | </li>
+					<li> <a href="#/batman">Batman</a> </li>
+					<li> <a href="#/ironman">Ironman</a> </li>
+					<li> <a href="#/spiderman">Spiderman</a> </li>
+				</ul>
+			</nav>
+		</header>
+		<main ng-view></main>
+		<footer>
+		 	<nav class="navbar navbar-default navbar-fixed-bottom">
+			  <div class="container"> &copy; rights reserver by synechron bangalore </div>
+			</nav>
+		</footer>
+		</div>
+	</body>
+</html>
